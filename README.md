@@ -1,5 +1,5 @@
 # MOL
-The repository contains codes for the Main Object Localization project
+The repository contains codes for the Main Object Localization project. It's implementation is still not complete, thus being subject to any future changes. 
 ## data_processing
 This repo contains implementation of data processing methods like feature extracting, extratree classifiers and file decoder.
 ## rpcserver_tools
