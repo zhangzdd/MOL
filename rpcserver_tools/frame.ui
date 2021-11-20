@@ -131,6 +131,32 @@
      <string>Experiment name</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="reboot_button">
+    <property name="geometry">
+     <rect>
+      <x>214</x>
+      <y>260</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reboot</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="duration">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>220</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Experiment duration(s)</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

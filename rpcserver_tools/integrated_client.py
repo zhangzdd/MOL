@@ -27,15 +27,17 @@ class ensemble:
         pass
 
 
-    def record(self,name):
+    def record(self,name,time):
         for i,proxy in enumerate(self.proxys):
             proxy.init()
+            print("Duration: "+str(time))
+            proxy.set_time(time)
             proxy.start("./storage/{}.wav".format(name))
         pass
 
-    def end_recording(self):
+    def end_recording(self,name):
         for proxy in self.proxys:
-            proxy.output()
+            proxy.output(name)
 
     def retrieve(self):
         for i,proxy in enumerate(self.proxys):
@@ -50,6 +52,10 @@ class ensemble:
                 handle.write(proxy.file_transfer("./storage/{}".format(file)).data) 
                 handle.close()
     
+    def reboot(self):
+        for proxy in self.proxys:
+            proxy.do("reboot")
+
     def stamp(self):
         for proxy in self.proxys:
             proxy.time_stamp()

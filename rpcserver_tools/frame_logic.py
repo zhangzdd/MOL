@@ -22,6 +22,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.list_dev_button.clicked.connect(self.list_dev)
         self.end_rec_button.clicked.connect(self.end_rec)
         self.retrieve_button.clicked.connect(self.retrieve_data)
+        self.reboot_button.clicked.connect(self.reboot)
 
     def add_dev(self):
         print(self.device_ip.text())
@@ -29,7 +30,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         
     
     def start_rec(self):
-        self.backend.record(self.experiment_name.text())
+        self.backend.record(self.experiment_name.text(),int(self.duration.text()))
 
     def stamp(self):
         self.backend.stamp()
@@ -41,10 +42,13 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             print(info)
     
     def end_rec(self):
-        self.backend.end_recording()
+        self.backend.end_recording(self.experiment_name.text())
 
     def retrieve_data(self):
         self.backend.retrieve()
+
+    def reboot(self):
+        self.backend.reboot()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
