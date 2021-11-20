@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'e:\GIX\sample_rpc_tools\frame.ui'
+# Form implementation generated from reading ui file 'e:\GIX\MOL\rpcserver_tools\frame.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -44,6 +44,12 @@ class Ui_MainWindow(object):
         self.experiment_name = QtWidgets.QLineEdit(self.centralwidget)
         self.experiment_name.setGeometry(QtCore.QRect(350, 180, 113, 20))
         self.experiment_name.setObjectName("experiment_name")
+        self.reboot_button = QtWidgets.QPushButton(self.centralwidget)
+        self.reboot_button.setGeometry(QtCore.QRect(214, 260, 91, 23))
+        self.reboot_button.setObjectName("reboot_button")
+        self.duration = QtWidgets.QLineEdit(self.centralwidget)
+        self.duration.setGeometry(QtCore.QRect(340, 220, 141, 20))
+        self.duration.setObjectName("duration")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 543, 23))
@@ -68,3 +74,5 @@ class Ui_MainWindow(object):
         self.end_rec_button.setText(_translate("MainWindow", "End recording"))
         self.retrieve_button.setText(_translate("MainWindow", "Retrieve"))
         self.experiment_name.setText(_translate("MainWindow", "Experiment name"))
+        self.reboot_button.setText(_translate("MainWindow", "Reboot"))
+        self.duration.setText(_translate("MainWindow", "Experiment duration(s)"))

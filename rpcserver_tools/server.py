@@ -59,6 +59,9 @@ class recorder:
         #server.register_instance(self)
         pass
     
+    def set_time(self,new_time):
+        self.length = new_time
+
     def current_state(self):
         attr_list = [str(getattr(self,i)) for i in dir(self) if not callable(getattr(self, i))]
         return ",".join(attr_list)
@@ -124,10 +127,12 @@ class recorder:
         self.stamp_string = []
 
     def output(self,name):
+    
         self.stream.stop_stream()
         self.stream.close()
         self.recording_obj.terminate()
         
+
         wf = wave.open(name,"wb")
         wf.setnchannels(self.channel)
         wf.setsampwidth(self.recording_obj.get_sample_size(self.recording_obj.get_format_from_width(self.width)))
