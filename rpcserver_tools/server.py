@@ -97,9 +97,12 @@ class recorder:
     def record(self,name):
         print("Thread started")
         print(self.on_recording)
-        self.clear()
+        self.frame = []
+        self.stamp_string = []
         for i in range(0,int(self.rate*self.length/self.chunk)):
             #print(self.on_recording)
+            if self.on_recording == False:
+                break
             data = self.stream.read(self.chunk,exception_on_overflow=False)
             self.frame.append(data)
         self.stream.stop_stream()

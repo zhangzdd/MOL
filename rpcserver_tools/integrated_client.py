@@ -15,6 +15,7 @@ class ensemble:
         pass
     
     def add_proxy(self,ip):
+        print("Adding "+ip)
         new_proxy = client.ServerProxy("http://{}:8000/".format(ip))
         self.proxys.append(new_proxy)
         self.ip.append(ip)
@@ -37,7 +38,7 @@ class ensemble:
 
     def end_recording(self,name):
         for proxy in self.proxys:
-            proxy.output(name)
+            proxy.end_rec()
 
     def retrieve(self):
         for i,proxy in enumerate(self.proxys):
@@ -52,13 +53,23 @@ class ensemble:
                 handle.write(proxy.file_transfer("./storage/{}".format(file)).data) 
                 handle.close()
     
+    def discard(self):
+        for proxy in self.proxys:
+            proxy.discard()
+
     def reboot(self):
         for proxy in self.proxys:
-            proxy.do("reboot")
+            proxy.do("sudo reboot")
 
     def stamp(self):
         for proxy in self.proxys:
             proxy.time_stamp()
+
+    def inquire(self):
+        flag = False
+        for i,proxy in enumerate(self.proxys):
+            time.sleep(1)
+            print("IP:{}, Status:{}".format(self.ip[i],proxy.isAlive()))
 
 
 if __name__ == "__main__":

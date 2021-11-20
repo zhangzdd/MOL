@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
-    <height>363</height>
+    <width>850</width>
+    <height>537</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="add_device_button">
     <property name="geometry">
      <rect>
-      <x>84</x>
-      <y>140</y>
+      <x>70</x>
+      <y>60</y>
       <width>81</width>
       <height>23</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="start_record_button">
     <property name="geometry">
      <rect>
-      <x>84</x>
-      <y>180</y>
+      <x>70</x>
+      <y>100</y>
       <width>81</width>
       <height>23</height>
      </rect>
@@ -43,10 +43,10 @@
    <widget class="QPushButton" name="time_stamp_button">
     <property name="geometry">
      <rect>
-      <x>84</x>
-      <y>220</y>
-      <width>81</width>
-      <height>23</height>
+      <x>80</x>
+      <y>232</y>
+      <width>741</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="text">
@@ -56,8 +56,8 @@
    <widget class="QPushButton" name="list_dev_button">
     <property name="geometry">
      <rect>
-      <x>84</x>
-      <y>260</y>
+      <x>70</x>
+      <y>180</y>
       <width>81</width>
       <height>23</height>
      </rect>
@@ -69,8 +69,8 @@
    <widget class="QLineEdit" name="device_ip">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>140</y>
+      <x>196</x>
+      <y>60</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -82,8 +82,8 @@
    <widget class="QLineEdit" name="device_id">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>140</y>
+      <x>336</x>
+      <y>60</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -95,8 +95,8 @@
    <widget class="QPushButton" name="end_rec_button">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>180</y>
+      <x>196</x>
+      <y>100</y>
       <width>101</width>
       <height>23</height>
      </rect>
@@ -108,8 +108,8 @@
    <widget class="QPushButton" name="retrieve_button">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>220</y>
+      <x>196</x>
+      <y>180</y>
       <width>101</width>
       <height>23</height>
      </rect>
@@ -121,21 +121,21 @@
    <widget class="QLineEdit" name="experiment_name">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>180</y>
+      <x>336</x>
+      <y>100</y>
       <width>113</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Experiment name</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="reboot_button">
     <property name="geometry">
      <rect>
-      <x>214</x>
-      <y>260</y>
+      <x>206</x>
+      <y>140</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -147,14 +147,40 @@
    <widget class="QLineEdit" name="duration">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>220</y>
+      <x>326</x>
+      <y>140</y>
       <width>141</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Experiment duration(s)</string>
+     <string>12000000</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="default_dev_button">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>10</y>
+      <width>371</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add default devices</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="discard_stamp">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>180</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Discard Timestamp</string>
     </property>
    </widget>
   </widget>
@@ -163,7 +189,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>543</width>
+     <width>850</width>
      <height>23</height>
     </rect>
    </property>
